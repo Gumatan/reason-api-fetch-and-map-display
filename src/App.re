@@ -16,5 +16,5 @@ let reducer = (state, action) =>
 let make = () => {
   let (state, dispatch) = React.useReducer(reducer, initialState);
 
-  <main> <FetchAddress /> <LeafletMapRe message="DAB" /> </main>;
+  <main> <FetchAddress /> <LeafletMapRe message="message" /> </main>;
 };
