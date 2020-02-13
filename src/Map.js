@@ -1,7 +1,7 @@
 const React = require("react");
 const PigeonMap = require("pigeon-maps");
 
-const Map = ({ message }) => {
+const Map = ({ defaultCenter, children }) => {
   const osm = (x, y, z) => {
     const s = String.fromCharCode(97 + ((x + y + z) % 3));
     return `https://${s}.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png`;
@@ -15,8 +15,9 @@ const Map = ({ message }) => {
     React.createElement(PigeonMap, {
       provider: osm,
       limitBounds: "edge",
-      center: [50.632787, 3.01809],
-      zoom: 18
+      defaultCenter,
+      zoom: 18,
+      children
     })
   );
 };
