@@ -34,11 +34,26 @@ type state =
   | NoResults
   | LoadedAddress(array(feature));
 
+external featureToJson: array(feature) => Js.Json.t = "%identity";
+
+type option('a) =
+  | None
+  | Some('a);
+
 [@react.component]
 let make = () => {
   let (state, setState) = React.useState(() => WaitingForUserSearch);
   let (query: string, setQuery) = React.useState(() => "");
+  // React.useEffect0(() => {
+  //   let features = LocalStorage.getItem("features")->Js.Nullable.toOption;
 
+  //   switch (features) {
+  //   | None => ()
+  //   | Some(features) => setState(_previousState => LoadedAddress(features))
+  //   };
+
+  //   None;
+  // });
   let transformSpacesToPlusInQuery = (string: string) => {
     let transformedQuery = ref("");
     for (i in 0 to Js.String.length(string) - 1) {
@@ -68,6 +83,10 @@ let make = () => {
              switch (Js.Array.length(jsonResponse##features)) {
              | 0 => setState(_previousState => NoResults)
              | _ =>
+               //  LocalStorage.setItem(
+               //    "features",
+               //    jsonResponse##features->featureToJson,
+               //  );
                setState(_previousState =>
                  LoadedAddress(jsonResponse##features)
                )
