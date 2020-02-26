@@ -1,0 +1,51 @@
+.SideBar {
+  padding: 10px;
+  width: 20%;
+  min-width: 180px;
+  background: #e1e9d6;
+  input {
+    margin-bottom: 10px;
+    border: 1px solid lightsteelblue;
+    border-radius: 3px;
+    padding: 5px;
+    width: 100%;
+  }
+  button[type="submit"] {
+    border-radius: 2px;
+    padding: 5px;
+    background: lightsteelblue;
+  }
+  p {
+    padding: 5px;
+    width: calc(100% - 20px);
+  }
+  select {
+    margin: 10px 0 15px 0;
+    width: 100%;
+  }
+  .markersContainer {
+    width: 100%;
+    height: calc(100% - 125px);
+    overflow-x: scroll;
+    .markerBox {
+      display: flex;
+      flex-flow: row nowrap;
+      button {
+        margin-bottom: 5px;
+        border: 1px solid lightsteelblue;
+        border-radius: 2px;
+        padding: 5px;
+        width: 100%;
+        background: whitesmoke;
+        &.selected {
+          background-color: #c3ecab;
+        }
+        &.save {
+          margin-left: 5px;
+          width: 45px;
+          align-self: stretch;
+        }
+      }
+    }
+  }
+}

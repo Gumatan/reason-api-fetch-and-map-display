@@ -1,0 +1,8 @@
+.Map {
+  height: 100%;
+  width: 80%;
+  max-width: calc(100% - 180px);
+  & > div {
+    display: block !important;
+  }
+}
