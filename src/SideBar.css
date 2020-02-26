@@ -1,0 +1,68 @@
+.SideBar {
+  padding: 10px;
+  width: 20%;
+  min-width: 180px;
+  background: #e1e9d6;
+}
+
+.SideBar input {
+  margin-bottom: 10px;
+  border: 1px solid lightsteelblue;
+  border-radius: 3px;
+  padding: 5px;
+  width: 100%;
+}
+
+.SideBar button[type="submit"] {
+  border-radius: 2px;
+  padding: 5px;
+  background: lightsteelblue;
+}
+
+.SideBar p {
+  padding: 5px;
+  width: calc(100% - 20px);
+}
+
+.SideBar select {
+  margin: 10px 0 15px 0;
+  width: 100%;
+}
+
+.SideBar .markersContainer {
+  width: 100%;
+  height: calc(100% - 125px);
+  overflow-x: scroll;
+}
+
+.SideBar .markersContainer .markerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.SideBar .markersContainer .markerBox button {
+  margin-bottom: 5px;
+  border: 1px solid lightsteelblue;
+  border-radius: 2px;
+  padding: 5px;
+  width: 100%;
+  background: whitesmoke;
+}
+
+.SideBar .markersContainer .markerBox button.selected {
+  background-color: #c3ecab;
+}
+
+.SideBar .markersContainer .markerBox button.save {
+  margin-left: 5px;
+  width: 45px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+/*# sourceMappingURL=SideBar.css.map */
